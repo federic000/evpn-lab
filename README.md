@@ -14,14 +14,13 @@ the picture shows ethernet port connectivity and the underlay IGP setup
 
 ![the diagram shows the idea](./pictures/slide4.png)
 
-these are the services already configured in the configuration, a L2 point to point and a L3 EVPN based service
+these are the services already provided in the configuration, a L2 point to point and a L3 EVPN-based service
 
 ![the diagram shows the idea](./pictures/slide5.png)
 
 wireshark pcap evpn_l2.pcap shows EVPN route-type 2 exchange
 
 ![the diagram shows the idea](./pictures/slide6.png)
-
 
 wireshark pcap evpn_l3.pcap shows EVPN route-type 5 exchange
 
