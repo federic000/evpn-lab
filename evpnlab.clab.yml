@@ -1,0 +1,37 @@
+#topology documentation: http://containerlab.dev/lab-examples/srl-ceos/
+name: evpnlab1
+
+topology:
+  nodes:
+    CL1:
+      kind: linux
+      image: federic0/fedepine
+    CL2:
+      kind: linux
+      image: federic0/fedepine
+    R1a:
+      kind: srl
+      image: ghcr.io/nokia/srlinux
+    R1b:
+      kind: srl
+      image: ghcr.io/nokia/srlinux
+    R2a:
+      kind: srl
+      image: ghcr.io/nokia/srlinux
+    R2b:
+      kind: srl
+      image: ghcr.io/nokia/srlinux
+ 
+  links:
+    - endpoints: ["CL1:eth1", "R1a:e1-3"]
+    - endpoints: ["CL1:eth2", "R1b:e1-3"]
+    - endpoints: ["CL2:eth1", "R2a:e1-3"]
+    - endpoints: ["CL2:eth2", "R2b:e1-3"]
+    - endpoints: ["R1a:e1-1", "R1b:e1-1"]
+    - endpoints: ["R1a:e1-2", "R2a:e1-2"]
+    - endpoints: ["R1b:e1-2", "R2b:e1-2"]
+    - endpoints: ["R2a:e1-1", "R2b:e1-1"]
+    ##
+
+
+
